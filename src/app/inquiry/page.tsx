@@ -3,11 +3,21 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, CheckCircle2, ChevronRight, Sun, Moon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 export default function InquiryPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+    const [formData, setFormData] = useState({
+    studentName: '',
+    parentName: '',
+    mobile: '',
+    class: '',
+    school: '',
+    course: '',
+    message: ''
+  });
+const [isSubmitted, setIsSubmitted] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -17,6 +27,22 @@ export default function InquiryPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Construct WhatsApp message
+    const message = `*New Enquiry for Anurag Classes*%0A%0A` +
+      `*Student Name:* ${formData.studentName}%0A` +
+      `*Parent Name:* ${formData.parentName || 'N/A'}%0A` +
+      `*Mobile:* ${formData.mobile}%0A` +
+      `*Class:* ${formData.class}%0A` +
+      `*School:* ${formData.school || 'N/A'}%0A` +
+      `*Course:* ${formData.course}%0A` +
+      `*Message:* ${formData.message || 'N/A'}`;
+    
+    const whatsappUrl = `https://wa.me/917977338822?text=${message}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 5000);
   };
@@ -34,8 +60,18 @@ export default function InquiryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 text-gradient">
-                ANURAG CLASSES
+              <div className="flex items-center gap-3">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Anurag Classes" 
+                  width={40} 
+                  height={40} 
+                  className="rounded-full shadow-sm"
+                />
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg text-slate-900 dark:text-white leading-tight">Anurag Classes</span>
+                  <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">since 2015</span>
+                </div>
               </div>
             </Link>
             <div className="flex items-center space-x-6">
@@ -86,22 +122,22 @@ export default function InquiryPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Student Name *</label>
-                    <input required type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="John Doe" />
+                    <input required type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="John Doe" value={formData.studentName} onChange={(e) => setFormData({...formData, studentName: e.target.value})} />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Parent Name</label>
-                    <input type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="Jane Doe" />
+                    <input type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="Jane Doe" value={formData.parentName} onChange={(e) => setFormData({...formData, parentName: e.target.value})} />
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Mobile Number *</label>
-                    <input required type="tel" pattern="[0-9]{10}" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="10-digit number" />
+                    <input required type="tel" pattern="[0-9]{10}" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="10-digit number" value={formData.mobile} onChange={(e) => setFormData({...formData, mobile: e.target.value})} />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Class / Standard *</label>
-                    <select required className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors appearance-none shadow-sm cursor-pointer">
+                    <select required value={formData.class} onChange={(e) => setFormData({...formData, class: e.target.value})} className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors appearance-none shadow-sm cursor-pointer">
                       <option value="" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Select Class</option>
                       <option value="8" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Class VIII</option>
                       <option value="9" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Class IX</option>
@@ -115,11 +151,11 @@ export default function InquiryPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">School / College Name</label>
-                    <input type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="XYZ School" />
+                    <input type="text" className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors shadow-sm" placeholder="XYZ School" value={formData.school} onChange={(e) => setFormData({...formData, school: e.target.value})} />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Course Interested *</label>
-                    <select required className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors appearance-none shadow-sm cursor-pointer">
+                    <select required value={formData.course} onChange={(e) => setFormData({...formData, course: e.target.value})} className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors appearance-none shadow-sm cursor-pointer">
                       <option value="" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Select Course</option>
                       <option value="state" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">State Board</option>
                       <option value="cbse" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">CBSE</option>
@@ -134,7 +170,7 @@ export default function InquiryPage() {
 
                 <div className="space-y-2">
                   <label className="text-sm text-slate-700 dark:text-slate-400 font-bold">Message</label>
-                  <textarea rows={4} className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors resize-none shadow-sm" placeholder="Any specific questions?"></textarea>
+                  <textarea rows={4} className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 transition-colors resize-none shadow-sm" placeholder="Any specific questions?" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})}></textarea>
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all flex items-center justify-center">

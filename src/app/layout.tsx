@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,21 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="antialiased min-h-screen relative text-foreground transition-colors duration-300">
+      <body className="antialiased min-h-screen relative text-foreground transition-colors duration-300 overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {/* Background Orbs */}
-          <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-            <div className="bg-orb orb-1"></div>
-            <div className="bg-orb orb-2"></div>
-            <div className="bg-orb orb-3"></div>
-          </div>
-          
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
