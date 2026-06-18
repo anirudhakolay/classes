@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Anurag Classes | Science, Commerce, NEET, JEE, MHT-CET",
   description: "Building Strong Foundations for Academic Success. Trusted coaching institute since 2015 for Classes VIII to XII, NEET, JEE, and MHT-CET.",
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
