@@ -55,43 +55,6 @@ const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
     <main className="min-h-screen pt-32 pb-20 px-4">
-      {/* Navigation - simplified for subpages */}
-      <nav className="fixed top-0 w-full z-50 glass border-b-0 border-orange-500/10 dark:border-white/10 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              <div className="flex items-center gap-3">
-                <Image 
-                  src="/logo.jpg" 
-                  alt="Anurag Classes" 
-                  width={40} 
-                  height={40} 
-                  className="rounded-full shadow-sm"
-                />
-                <div className="flex flex-col">
-                  <span className="font-bold text-lg text-slate-900 dark:text-white leading-tight">Anurag Classes</span>
-                  <span className="text-[10px] text-orange-500 font-bold uppercase tracking-wider">since 2015</span>
-                </div>
-              </div>
-            </Link>
-            <div className="flex items-center space-x-6">
-              <Link href="/" className="text-slate-800 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white transition-colors font-medium text-sm hidden sm:block">
-                Back to Home
-              </Link>
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="p-2 rounded-full glass hover:bg-orange-500/10 dark:hover:bg-white/10 transition-colors text-slate-800 dark:text-slate-300"
-                  aria-label="Toggle Dark Mode"
-                >
-                  {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      </nav>
-
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeIn} className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900 dark:text-white">Send an <span className="text-gradient bg-gradient-to-r from-emerald-500 to-teal-500">Enquiry</span></h1>

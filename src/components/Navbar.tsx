@@ -5,54 +5,37 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Menu, X, ChevronRight, Sun, Moon } from "lucide-react";
-import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
 
   useEffect(() => { 
     setMounted(true); 
-
-    const sections = ["home", "about", "courses", "achievements"];
-    const observerOptions = {
-      root: null,
-      rootMargin: "-20% 0px -70% 0px", // Adjust to trigger when section is in middle of viewport
-      threshold: 0
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    sections.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'Achievements', href: '#achievements' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'Achievements', href: '/achievements' },
   ];
+
+  const isActive = (href: string) => {
+    if (href === '/' && pathname === '/') return true;
+    if (href !== '/' && pathname.startsWith(href)) return true;
+    return false;
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 glass border-b-0 border-orange-500/10 dark:border-white/10 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="#home" className="flex-shrink-0 flex items-center">
+          <Link href="/" className="flex-shrink-0 flex items-center">
             <div className="flex items-center gap-3">
               <Image src="/logo.jpg" alt="Anurag Classes" width={48} height={48} className="rounded-full shadow-sm" priority />
               <div className="flex flex-col">
@@ -68,13 +51,13 @@ export function Navbar() {
                 key={link.name} 
                 href={link.href} 
                 className={`transition-colors text-sm font-bold relative py-1 ${
-                  activeSection === link.href.substring(1) 
+                  isActive(link.href) 
                     ? "text-orange-500" 
                     : "text-slate-800 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white"
                 }`}
               >
                 {link.name}
-                {activeSection === link.href.substring(1) && (
+                {isActive(link.href) && (
                   <motion.div 
                     layoutId="activeTab" 
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full"
@@ -83,7 +66,7 @@ export function Navbar() {
                 )}
               </Link>
             ))}
-            <Link href="/inquiry" className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 transition-colors text-sm font-bold flex items-center">
+            <Link href="/inquiry" className={`text-sm font-bold flex items-center transition-colors ${pathname === '/inquiry' ? 'text-orange-500' : 'text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300'}`}>
               Inquiry <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
@@ -110,27 +93,34 @@ export function Navbar() {
         </div>
       </div>
 
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass-panel absolute w-full left-0 border-t border-orange-500/10 dark:border-white/10 shadow-xl">
-          <div className="px-4 pt-2 pb-6 space-y-1 sm:px-6">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                onClick={() => setIsMobileMenuOpen(false)} 
-                className={`block px-3 py-3 rounded-md text-base font-bold transition-colors ${
-                  activeSection === link.href.substring(1) 
-                    ? "text-orange-500 bg-orange-500/5" 
-                    : "text-slate-800 dark:text-slate-300 hover:text-orange-500"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link href="/inquiry" onClick={() => setIsMobileMenuOpen(false)} className="text-orange-500 hover:text-orange-600 block px-3 py-3 rounded-md text-base font-bold bg-orange-500/5 mt-2">Inquiry</Link>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden glass-panel absolute w-full left-0 border-t border-orange-500/10 dark:border-white/10 shadow-xl"
+          >
+            <div className="px-4 pt-2 pb-6 space-y-1 sm:px-6">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.name} 
+                  href={link.href} 
+                  onClick={() => setIsMobileMenuOpen(false)} 
+                  className={`block px-3 py-3 rounded-md text-base font-bold transition-colors ${
+                    isActive(link.href) 
+                      ? "text-orange-500 bg-orange-500/5" 
+                      : "text-slate-800 dark:text-slate-300 hover:text-orange-500"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link href="/inquiry" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base font-bold mt-2 transition-colors ${pathname === '/inquiry' ? 'text-orange-600 bg-orange-500/10' : 'text-orange-500 hover:text-orange-600 bg-orange-500/5'}`}>Inquiry</Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
