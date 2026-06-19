@@ -124,16 +124,16 @@ export default function CoursePage() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass border-b-0 border-slate-200 dark:border-white/10 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-md border-none">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="flex justify-between items-center h-20">
-            <Link href="/" className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex-shrink-0 flex items-center no-underline">
               <div className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-amber-500 text-gradient">
                 ANURAG CLASSES
               </div>
             </Link>
             <div className="flex items-center space-x-6">
-              <Link href="/#courses" className="text-slate-700 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white transition-colors font-medium text-sm hidden sm:flex items-center">
+              <Link href="/courses" className="text-slate-700 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white transition-colors font-medium text-sm hidden sm:flex items-center no-underline">
                 <ArrowLeft className="w-4 h-4 mr-1" /> Back to Courses
               </Link>
               {mounted && (

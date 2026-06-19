@@ -69,7 +69,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link href="/inquiry" className={`text-sm font-bold flex items-center transition-colors ${pathname === '/inquiry' ? 'text-orange-500' : 'text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300'}`}>
-              Enquiry <ChevronRight className="w-4 h-4 ml-1" />
+              Inquiry <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 

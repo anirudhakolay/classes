@@ -20,7 +20,7 @@ const [isSubmitted, setIsSubmitted] = useState(false);
     e.preventDefault();
     
     // Construct WhatsApp message
-    const message = `*New Enquiry for Anurag Classes*%0A%0A` +
+    const message = `*New Inquiry for Anurag Classes*%0A%0A` +
       `*Student Name:* ${formData.studentName}%0A` +
       `*Parent Name:* ${formData.parentName || 'N/A'}%0A` +
       `*Mobile:* ${formData.mobile}%0A` +
@@ -48,7 +48,7 @@ const [isSubmitted, setIsSubmitted] = useState(false);
     <main className="min-h-screen pt-32 pb-20 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeIn} className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900 dark:text-white">Send an <span className="text-gradient bg-gradient-to-r from-emerald-500 to-teal-500">Enquiry</span></h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900 dark:text-white">Send an <span className="text-gradient bg-gradient-to-r from-emerald-500 to-teal-500">Inquiry</span></h1>
           <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto font-medium">
             Have questions about our courses, admissions, or fees? Fill out the form below and our team will get back to you shortly.
@@ -68,7 +68,7 @@ const [isSubmitted, setIsSubmitted] = useState(false);
                 <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-500/20 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-10 h-10 text-emerald-500" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Enquiry Sent Successfully!</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Inquiry Sent Successfully!</h3>
                 <p className="text-slate-700 dark:text-slate-300 font-medium">Thank you for reaching out. Our team will contact you within 24 hours.</p>
               </div>
             ) : (
@@ -129,7 +129,7 @@ const [isSubmitted, setIsSubmitted] = useState(false);
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all flex items-center justify-center">
-                  Submit Enquiry <Send className="w-5 h-5 ml-2" />
+                  Submit Inquiry <Send className="w-5 h-5 ml-2" />
                 </button>
               </form>
             )}

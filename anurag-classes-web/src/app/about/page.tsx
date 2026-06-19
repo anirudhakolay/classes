@@ -103,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-14 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-4 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div {...fadeIn} className="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-14 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-4 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-8">Awards & <span className="text-orange-500">Recognition</span></h2>
@@ -191,7 +191,7 @@ export default function AboutPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-14">
+      <section className="py-6">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-8">Ready to start your journey with us?</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

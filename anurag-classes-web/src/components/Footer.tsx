@@ -34,7 +34,7 @@ export function Footer() {
           <div>
             <h4 className="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Courses', 'Achievements'].map((link) => (
+              {['Home', 'About', 'Courses', 'Achievements', 'Gallery', 'Blog', 'Inquiry'].map((link) => (
                 <li key={link}><Link href={link === 'Home' ? '/' : `/${link.toLowerCase()}`} className="text-slate-700 dark:text-slate-400 hover:text-orange-500 dark:hover:text-white transition-colors text-sm font-medium">{link}</Link></li>
               ))}
             </ul>
@@ -42,15 +42,37 @@ export function Footer() {
           <div>
             <h4 className="text-slate-900 dark:text-white font-bold mb-6">Courses</h4>
             <ul className="space-y-3">
-              {['Classes VIII-X', 'XI-XII Science', 'XI-XII Commerce', 'NEET', 'JEE', 'MHT-CET'].map((course) => (<li key={course} className="text-slate-700 dark:text-slate-400 text-sm font-medium">{course}</li>))}
+              {[
+                { name: 'Classes VIII-X', slug: 'classes-viii-x' },
+                { name: 'XI-XII Science', slug: 'xi-xii-science' },
+                { name: 'XI-XII Commerce', slug: 'xi-xii-commerce' },
+                { name: 'NEET', slug: 'neet' },
+                { name: 'JEE', slug: 'jee' },
+                { name: 'MHT-CET', slug: 'mht-cet' }
+              ].map((course) => (
+                <li key={course.slug}>
+                  <Link href={`/courses/${course.slug}`} className="text-slate-700 dark:text-slate-400 hover:text-orange-500 dark:hover:text-white transition-colors text-sm font-medium">
+                    {course.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="text-slate-900 dark:text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-3">
-              <li className="text-slate-700 dark:text-slate-400 text-sm flex items-start font-medium"><MapPin className="w-4 h-4 mr-2 mt-0.5 text-orange-500" /> New Panvel & Kalamboli</li>
-              <li className="text-slate-700 dark:text-slate-400 text-sm flex items-center font-medium"><Phone className="w-4 h-4 mr-2 text-emerald-500" /> 7977338822</li>
-              <li className="text-slate-700 dark:text-slate-400 text-sm flex items-center font-medium"><Mail className="w-4 h-4 mr-2 text-emerald-500" /> info@anuragclasses.com</li>
+              <li className="text-sm flex items-start font-medium">
+                <MapPin className="w-4 h-4 mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
+                <a href="https://www.google.com/maps/search/New+Panvel+Kalamboli" target="_blank" rel="noopener noreferrer" className="text-slate-700 dark:text-slate-400 hover:text-orange-500 dark:hover:text-white transition-colors">New Panvel & Kalamboli</a>
+              </li>
+              <li className="text-sm flex items-center font-medium">
+                <Phone className="w-4 h-4 mr-2 text-emerald-500 flex-shrink-0" />
+                <a href="tel:7977338822" className="text-slate-700 dark:text-slate-400 hover:text-emerald-500 dark:hover:text-white transition-colors">7977338822</a>
+              </li>
+              <li className="text-sm flex items-center font-medium">
+                <Mail className="w-4 h-4 mr-2 text-emerald-500 flex-shrink-0" />
+                <a href="mailto:info@anuragclasses.com" className="text-slate-700 dark:text-slate-400 hover:text-emerald-500 dark:hover:text-white transition-colors">info@anuragclasses.com</a>
+              </li>
             </ul>
           </div>
         </div>

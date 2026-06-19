@@ -131,7 +131,7 @@ export default function GalleryPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6">
               {selectedAlbumIdx === null ? (
-                <>Our <span className="text-orange-500">Memories</span></>
+                <>Our <span className="text-orange-500">Gallery</span></>
               ) : (
                 <span className="text-orange-500">{albums[selectedAlbumIdx].title}</span>
               )}
