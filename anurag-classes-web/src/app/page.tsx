@@ -233,7 +233,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <Link href="/courses" className="px-12 py-5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-black text-lg hover:scale-105 transition-all shadow-xl">View All Programs</Link>
+          <Link href="/courses" className="px-12 py-5 rounded-full bg-orange-500 text-white font-black text-lg hover:scale-105 transition-all shadow-xl hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]">View All Programs</Link>
         </div>
       </section>
 

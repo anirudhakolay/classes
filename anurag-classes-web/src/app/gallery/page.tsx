@@ -160,34 +160,34 @@ export default function GalleryPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.4 }}
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
               >
                 {albums.map((album, i) => (
                   <div
                     key={i}
                     onClick={() => openAlbum(i)}
-                    className="bg-white dark:bg-slate-800 p-4 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer group flex flex-col justify-between"
+                    className="bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700/50 hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col overflow-hidden"
                   >
-                    <div>
-                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4 shadow-inner">
-                        <Image
-                          src={`/gallery/${album.images[0]}`}
-                          alt={album.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white z-10 shadow-sm">
-                          {album.images.length} Photos
-                        </div>
-                        <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-700">
+                      <Image
+                        src={`/gallery/${album.images[0]}`}
+                        alt={album.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-white z-10 shadow-lg">
+                        {album.images.length} Photos
                       </div>
-                      <h3 className="text-lg font-black text-slate-900 dark:text-white leading-snug group-hover:text-orange-500 transition-colors duration-300 mb-1 px-1">
+                      <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div className="p-4 flex flex-col justify-between flex-1">
+                      <h3 className="text-sm font-black text-slate-900 dark:text-white leading-tight group-hover:text-orange-500 transition-colors duration-300 mb-1">
                         {album.title}
                       </h3>
+                      <p className="text-xs text-slate-600 dark:text-slate-400 font-semibold">
+                        Click to view album
+                      </p>
                     </div>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 font-bold tracking-wide mt-2 px-1">
-                      Click to view album
-                    </p>
                   </div>
                 ))}
               </motion.div>
