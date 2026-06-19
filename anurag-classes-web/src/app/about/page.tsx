@@ -64,7 +64,15 @@ export default function AboutPage() {
               <p className="text-slate-500 font-bold text-md mb-8 italic">Founder & Director, Anurag Classes</p>
               
               <div className="space-y-6 text-slate-700 dark:text-slate-300 text-lg leading-relaxed font-medium">
-                <p>An experienced educator and mentor dedicated to nurturing students’ academic excellence, personal growth, and entrepreneurial mindset. With years of teaching expertise, he believes that every child possesses unique talents and unlimited potential.</p>
+                <p>
+                  Prof. Anandkumar B. Sonkar is a highly respected educator and academic leader with over a decade of dedication to teaching. Holding an M.Sc. in Chemistry, a Bachelor of Education (B.Ed.), and a Diploma in School Management (D.S.M.), he combines strong academic credentials with a profound understanding of school administration and pedagogy.
+                </p>
+                <p>
+                  Specializing in Science and Chemistry coaching, Prof. Sonkar has earned a reputation for simplifying complex chemical equations, reaction mechanisms, and concepts into intuitive lessons. Under his direct mentorship, hundreds of students have successfully cracked competitive entrance examinations like JEE, NEET, and MHT-CET, securing admissions into prestigious professional institutions.
+                </p>
+                <p>
+                  Beyond curriculum teaching, his educational vision is holistic. He focuses on developing student confidence, critical analytical skills, and an entrepreneurial mindset. By keeping batch sizes optimum, he ensures that every individual student receives personalized attention to unlock their unique potential.
+                </p>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-slate-100 dark:border-slate-800">
