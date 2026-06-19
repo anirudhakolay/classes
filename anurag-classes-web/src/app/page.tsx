@@ -17,8 +17,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const carouselImages = [
     "https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=2070&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
@@ -27,16 +25,57 @@ export default function Home() {
     "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
+
+  const displayImages = [
+    carouselImages[carouselImages.length - 1], // index 0: duplicate of E
+    ...carouselImages,                          // index 1..5: A, B, C, D, E
+    carouselImages[0],                          // index 6: duplicate of A
+  ];
+
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-  }, [carouselImages.length]);
+    setIsTransitionEnabled(true);
+    setCurrentSlide((prev) => prev + 1);
+  }, []);
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+    setIsTransitionEnabled(true);
+    setCurrentSlide((prev) => prev - 1);
+  };
+
+  const handleDotClick = (index: number) => {
+    setIsTransitionEnabled(true);
+    setCurrentSlide(index + 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (currentSlide === displayImages.length - 1) {
+      setIsTransitionEnabled(false);
+      setCurrentSlide(1);
+    } else if (currentSlide === 0) {
+      setIsTransitionEnabled(false);
+      setCurrentSlide(displayImages.length - 2);
+    }
+  };
+
+  const getActiveIndex = () => {
+    if (currentSlide === 0) return carouselImages.length - 1;
+    if (currentSlide === displayImages.length - 1) return 0;
+    return currentSlide - 1;
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 2000);
+    if (!isTransitionEnabled) {
+      const timer = setTimeout(() => {
+        setIsTransitionEnabled(true);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitionEnabled]);
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
@@ -75,17 +114,18 @@ export default function Home() {
       {/* Full-bleed Banner Carousel Section */}
       <section className="w-full relative overflow-hidden group aspect-[3/1] md:aspect-[4/1] lg:aspect-[5/1] max-h-[300px] shadow-lg">
         <div 
-          className="flex w-full h-full transition-transform duration-700 ease-in-out"
+          className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {carouselImages.map((img, idx) => (
+          {displayImages.map((img, idx) => (
             <div key={idx} className="relative w-full h-full flex-shrink-0">
               <Image 
                 src={img} 
                 alt={`Slide ${idx + 1}`} 
                 fill 
                 className="object-cover"
-                priority={idx === 0}
+                priority={idx === 1}
               />
             </div>
           ))}
@@ -94,13 +134,13 @@ export default function Home() {
         {/* Manual Controls */}
         <button 
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button 
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -110,8 +150,8 @@ export default function Home() {
           {carouselImages.map((_, idx) => (
             <button 
               key={idx}
-              onClick={() => setCurrentSlide(idx)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${idx === currentSlide ? "bg-orange-500 w-8" : "bg-white/60"}`}
+              onClick={() => handleDotClick(idx)}
+              className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${idx === getActiveIndex() ? "bg-orange-500 w-8" : "bg-white/60"}`}
             />
           ))}
         </div>
