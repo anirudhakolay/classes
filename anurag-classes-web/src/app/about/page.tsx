@@ -54,10 +54,6 @@ export default function AboutPage() {
                   <Image src="/achievements/achievement1.jpg" alt="Award Presentation" fill className="object-cover" />
                 </div>
               </div>
-              <div className="bg-orange-50 dark:bg-orange-500/5 p-6 rounded-2xl border border-orange-100 dark:border-orange-500/20 text-center">
-                <p className="text-orange-600 dark:text-orange-400 font-bold">Maharashtra Udyog Bhushan Award</p>
-                <p className="text-slate-500 text-xs mt-1">Excellence in Science Teaching</p>
-              </div>
             </motion.div>
 
             <motion.div {...fadeIn} className="lg:col-span-7">
@@ -77,17 +73,32 @@ export default function AboutPage() {
                   Beyond curriculum teaching, his educational vision is holistic. He focuses on developing student confidence, critical analytical skills, and an entrepreneurial mindset. By keeping batch sizes optimum, he ensures that every individual student receives personalized attention to unlock their unique potential.
                 </p>
               </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-slate-100 dark:border-slate-800">
-                {[{ n: "10+", l: "Years Excellence" }, { n: "1000+", l: "Students Mentored" }, { n: "4", l: "Branches" }, { n: "95.6%", l: "Top Score" }].map((s, i) => (
-                  <div key={i}>
-                    <div className="text-3xl font-black text-orange-500">{s.n}</div>
-                    <div className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">{s.l}</div>
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
+
+          {/* Aligned Award Info & Stats Row */}
+          <motion.div 
+            {...fadeIn} 
+            className="grid lg:grid-cols-12 gap-16 mt-12 pt-12 border-t border-slate-100 dark:border-slate-800 items-center"
+          >
+            {/* Award Card (spans 5 cols on desktop to align with left column) */}
+            <div className="lg:col-span-5">
+              <div className="bg-orange-50 dark:bg-orange-500/5 p-6 rounded-2xl border border-orange-100 dark:border-orange-500/20 text-center">
+                <p className="text-orange-600 dark:text-orange-400 font-bold">Maharashtra Udyog Bhushan Award</p>
+                <p className="text-slate-500 text-xs mt-1">Excellence in Science Teaching</p>
+              </div>
+            </div>
+
+            {/* Stats (spans 7 cols on desktop to align with right column) */}
+            <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[{ n: "10+", l: "Years Excellence" }, { n: "1000+", l: "Students Mentored" }, { n: "4", l: "Branches" }, { n: "95.6%", l: "Top Score" }].map((s, i) => (
+                <div key={i} className="text-center md:text-left">
+                  <div className="text-3xl font-black text-orange-500">{s.n}</div>
+                  <div className="text-[10px] text-slate-500 uppercase font-bold tracking-widest mt-1">{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
