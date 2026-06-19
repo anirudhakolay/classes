@@ -12,40 +12,47 @@ export default function BlogPage() {
   };
  
   return (
-    <main className="min-h-screen pt-32 pb-20 px-4">
+    <main className="min-h-screen pt-20">
+      {/* Header */}
+      <section className="bg-slate-50 dark:bg-slate-900/50 py-16 border-b border-slate-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div {...fadeIn}>
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">Our <span className="text-orange-500">Blog</span></h1>
+            <div className="w-24 h-2 bg-orange-500 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed">
+              Stay updated with the latest educational news, exam preparation tips, and announcements from Anurag Classes.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-      <div className="max-w-5xl mx-auto">
-        <motion.div {...fadeIn} className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-slate-900 dark:text-white">Our <span className="text-gradient bg-gradient-to-r from-orange-500 to-amber-500">Blog</span></h1>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto rounded-full"></div>
-          <p className="mt-6 text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto font-medium">
-            Stay updated with the latest educational news, exam preparation tips, and announcements from Anurag Classes.
-          </p>
-        </motion.div>
+      {/* Main Content */}
+      <section className="py-14 bg-white dark:bg-slate-900">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Search & Filter - Visual Placeholder */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4"
         >
           <div className="relative w-full sm:w-96">
-            <input 
-              type="text" 
-              placeholder="Search articles..." 
-              className="w-full bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-full pl-12 pr-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-orange-500 dark:focus:border-orange-400 transition-colors shadow-sm" 
+            <input
+              type="text"
+              placeholder="Search articles..."
+              className="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg pl-12 pr-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-orange-500 dark:focus:border-orange-400 transition-colors shadow-sm"
             />
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
           </div>
           <div className="flex gap-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
             {['All', 'Study Tips', 'Exam News', 'Success Stories'].map((category, idx) => (
-              <button 
-                key={category} 
-                className={`px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
-                  idx === 0 
-                    ? 'bg-orange-500 text-white' 
-                    : 'glass text-slate-800 dark:text-slate-300 hover:bg-orange-500/10 dark:hover:bg-white/10'
+              <button
+                key={category}
+                className={`px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-colors ${
+                  idx === 0
+                    ? 'bg-orange-500 text-white'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 hover:bg-orange-500/10 dark:hover:bg-white/10'
                 }`}
               >
                 {category}
@@ -55,24 +62,25 @@ export default function BlogPage() {
         </motion.div>
 
         {/* Empty State */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="glass-panel p-12 md:p-20 rounded-3xl text-center bg-white/70 dark:bg-slate-900/70 border-dashed border-2 border-slate-300 dark:border-slate-700"
+          className="p-12 md:p-20 rounded-3xl text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
         >
           <div className="w-24 h-24 bg-orange-100 dark:bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <FileText className="w-10 h-10 text-orange-500" />
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">No articles published yet</h3>
-          <p className="text-slate-700 dark:text-slate-400 text-lg mb-8 max-w-lg mx-auto">
+          <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-4">No articles published yet</h3>
+          <p className="text-slate-700 dark:text-slate-400 text-lg mb-8 max-w-lg mx-auto font-medium">
             We are currently working on creating valuable content for you. Check back soon for study materials, exam tips, and more!
           </p>
-          <Link href="/inquiry" className="inline-flex px-8 py-3 rounded-full bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/25">
+          <Link href="/inquiry" className="inline-flex px-8 py-3 rounded-lg bg-orange-500 text-white font-black hover:bg-orange-600 transition-colors shadow-lg">
             Contact Us
           </Link>
         </motion.div>
       </div>
+      </section>
     </main>
   );
 }

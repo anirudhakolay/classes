@@ -96,7 +96,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-12 lg:pt-48 lg:pb-16 px-4 flex flex-col items-center justify-center relative text-center">
+      <section className="pt-24 pb-16 sm:pt-32 md:pt-40 lg:pt-36 px-4 flex flex-col items-center justify-center relative text-center">
         <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-5 dark:opacity-10 pointer-events-none" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop')" }} />
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="max-w-4xl mx-auto z-10">
           <div className="inline-block mb-6 px-5 py-2 rounded-full glass border-orange-500/20 text-sm font-semibold text-orange-600 dark:text-orange-400 tracking-widest">
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-24 relative z-10 bg-slate-50 dark:bg-slate-900/40">
+      <section className="pt-24 relative z-10 bg-slate-50 dark:bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-16 relative">
             <div className="flex justify-center mb-6">
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Course Preview */}
-      <section className="py-24 relative z-10 bg-white dark:bg-slate-900">
+      <section className="pt-20 pb-16 relative z-10 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">Our <span className="text-orange-500">Academic Sections</span></h2>
@@ -238,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* Toppers Preview */}
-      <section className="py-24 relative z-10 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800">
+      <section className="pb-20 pt-10 relative z-10 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">Meet Our <span className="text-orange-500">Toppers</span></h2>
