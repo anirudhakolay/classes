@@ -166,7 +166,7 @@ export default function GalleryPage() {
                   <div
                     key={i}
                     onClick={() => openAlbum(i)}
-                    className="bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700/50 hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col overflow-hidden"
+                    className="bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700/50 hover:shadow-lg transition-all duration-300 cursor-pointer group flex flex-col overflow-hidden max-w-xs mx-auto w-full"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-700">
                       <Image
