@@ -14,9 +14,9 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => { 
+  useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setMounted(true); 
+    setMounted(true);
   }, []);
 
   const navLinks = [
@@ -47,22 +47,21 @@ export function Navbar() {
               </div>
             </div>
           </Link>
-          
+
           <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className={`transition-colors text-sm font-bold relative py-1 ${
-                  isActive(link.href) 
-                    ? "text-orange-500" 
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`transition-colors text-sm font-bold relative py-1 ${isActive(link.href)
+                    ? "text-orange-500"
                     : "text-slate-800 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white"
-                }`}
+                  }`}
               >
                 {link.name}
                 {isActive(link.href) && (
-                  <motion.div 
-                    layoutId="activeTab" 
+                  <motion.div
+                    layoutId="activeTab"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -70,7 +69,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link href="/inquiry" className={`text-sm font-bold flex items-center transition-colors ${pathname === '/inquiry' ? 'text-orange-500' : 'text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300'}`}>
-              Inquiry <ChevronRight className="w-4 h-4 ml-1" />
+              Enquiry <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 
@@ -98,7 +97,7 @@ export function Navbar() {
 
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -106,20 +105,19 @@ export function Navbar() {
           >
             <div className="px-4 pt-2 pb-6 space-y-1 sm:px-6">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.href} 
-                  onClick={() => setIsMobileMenuOpen(false)} 
-                  className={`block px-3 py-3 rounded-md text-base font-bold transition-colors ${
-                    isActive(link.href) 
-                      ? "text-orange-500 bg-orange-500/5" 
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block px-3 py-3 rounded-md text-base font-bold transition-colors ${isActive(link.href)
+                      ? "text-orange-500 bg-orange-500/5"
                       : "text-slate-800 dark:text-slate-300 hover:text-orange-500"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link href="/inquiry" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base font-bold mt-2 transition-colors ${pathname === '/inquiry' ? 'text-orange-600 bg-orange-500/10' : 'text-orange-500 hover:text-orange-600 bg-orange-500/5'}`}>Inquiry</Link>
+              <Link href="/inquiry" onClick={() => setIsMobileMenuOpen(false)} className={`block px-3 py-3 rounded-md text-base font-bold mt-2 transition-colors ${pathname === '/inquiry' ? 'text-orange-600 bg-orange-500/10' : 'text-orange-500 hover:text-orange-600 bg-orange-500/5'}`}>Enquiry</Link>
             </div>
           </motion.div>
         )}

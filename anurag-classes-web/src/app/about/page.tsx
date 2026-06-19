@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Header */}
-      <section className="bg-slate-50 dark:bg-slate-900/50 py-20 border-b border-slate-100 dark:border-slate-800">
+      <section className="bg-slate-50 dark:bg-slate-900/50 py-16 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeIn}>
             <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">About <span className="text-orange-500">Anurag Classes</span></h1>
@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       {/* About Section & Founder */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-14 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
             <motion.div {...fadeIn} className="lg:col-span-5 space-y-6">
@@ -79,7 +79,7 @@ export default function AboutPage() {
           {/* Aligned Award Info & Stats Row */}
           <motion.div 
             {...fadeIn} 
-            className="grid lg:grid-cols-12 gap-16 mt-12 pt-12 border-t border-slate-100 dark:border-slate-800 items-center"
+            className="grid lg:grid-cols-12 gap-16 mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 items-center"
           >
             {/* Award Card (spans 5 cols on desktop to align with left column) */}
             <div className="lg:col-span-5">
@@ -103,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-14 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div {...fadeIn} className="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700">
@@ -148,9 +148,9 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us? */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-14 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">Why <span className="text-orange-500">Choose Us?</span></h2>
             <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
           </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-14 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-8">Awards & <span className="text-orange-500">Recognition</span></h2>
@@ -191,7 +191,7 @@ export default function AboutPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
+      <section className="py-14">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-8">Ready to start your journey with us?</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
