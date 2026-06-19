@@ -67,7 +67,7 @@ export default function AboutPage() {
                   Prof. Anandkumar B. Sonkar is a highly respected educator and academic leader with over a decade of dedication to teaching. Holding an M.Sc. in Chemistry, a Bachelor of Education (B.Ed.), and a Diploma in School Management (D.S.M.), he combines strong academic credentials with a profound understanding of school administration and pedagogy.
                 </p>
                 <p>
-                  Specializing in Science and Chemistry coaching, Prof. Sonkar has earned a reputation for simplifying complex chemical equations, reaction mechanisms, and concepts into intuitive lessons. In recognition of his outstanding contributions to quality education and science instruction, he was honored with the prestigious <span className="font-bold text-slate-900 dark:text-white">Maharashtra Udyog Bhushan Award</span>, presented by the renowned Marathi actress <span className="font-bold text-slate-900 dark:text-white">Sonali Kulkarni</span>. Under his direct mentorship, hundreds of students have successfully cracked competitive entrance examinations like JEE, NEET, and MHT-CET, securing admissions into prestigious professional institutions.
+                  Specializing in Science and Chemistry coaching, Prof. Sonkar has earned a reputation for simplifying complex chemical equations, reaction mechanisms, and concepts into intuitive lessons. In recognition of his outstanding contributions to quality education and science instruction, he was honored with the prestigious <span className="font-bold text-slate-900 dark:text-white">Maharashtra Udyog Bhushan Award 2024</span>, presented by the renowned Marathi actress <span className="font-bold text-slate-900 dark:text-white">Sonali Kulkarni</span>. Under his direct mentorship, hundreds of students have successfully cracked competitive entrance examinations like JEE, NEET, and MHT-CET, securing admissions into prestigious professional institutions.
                 </p>
                 <p>
                   Beyond curriculum teaching, his educational vision is holistic. He focuses on developing student confidence, critical analytical skills, and an entrepreneurial mindset. By keeping batch sizes optimum, he ensures that every individual student receives personalized attention to unlock their unique potential.
@@ -84,7 +84,7 @@ export default function AboutPage() {
             {/* Award Card (spans 5 cols on desktop to align with left column) */}
             <div className="lg:col-span-5">
               <div className="bg-orange-50 dark:bg-orange-500/5 p-6 rounded-2xl border border-orange-100 dark:border-orange-500/20 text-center">
-                <p className="text-orange-600 dark:text-orange-400 font-bold">Maharashtra Udyog Bhushan Award</p>
+                <p className="text-orange-600 dark:text-orange-400 font-bold">Maharashtra Udyog Bhushan Award 2024</p>
                 <p className="text-slate-500 text-xs mt-1">Excellence in Science Teaching</p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="bg-white dark:bg-slate-800 p-10 rounded-[3rem] shadow-xl border border-orange-500/20">
               <Award className="w-16 h-16 text-orange-500 mx-auto mb-6" />
               <p className="text-xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed mb-6">
-                Anurag Classes, under the leadership of <span className="font-bold text-slate-900 dark:text-white">Prof. Anand Sonkar</span>, has been honored with the <span className="text-orange-500 font-black">Maharashtra Udyog Bhushan Award</span> for Excellence in Science Teaching. 
+                Anurag Classes, under the leadership of <span className="font-bold text-slate-900 dark:text-white">Prof. Anand Sonkar</span>, has been honored with the <span className="text-orange-500 font-black">Maharashtra Udyog Bhushan Award 2024</span> for Excellence in Science Teaching. 
               </p>
               <p className="text-slate-600 dark:text-slate-400 font-medium italic">
                 The award was presented by renowned Marathi actress Sonali Kulkarni, recognizing the institution’s commitment to academic excellence and quality education.
