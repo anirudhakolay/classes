@@ -54,8 +54,8 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`transition-colors text-sm font-bold relative py-1 ${isActive(link.href)
-                    ? "text-orange-500"
-                    : "text-slate-800 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white"
+                  ? "text-orange-500"
+                  : "text-slate-800 dark:text-slate-300 hover:text-orange-500 dark:hover:text-white"
                   }`}
               >
                 {link.name}
@@ -110,8 +110,8 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-3 py-3 rounded-md text-base font-bold transition-colors ${isActive(link.href)
-                      ? "text-orange-500 bg-orange-500/5"
-                      : "text-slate-800 dark:text-slate-300 hover:text-orange-500"
+                    ? "text-orange-500 bg-orange-500/5"
+                    : "text-slate-800 dark:text-slate-300 hover:text-orange-500"
                     }`}
                 >
                   {link.name}

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Award, GraduationCap, Users, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import photo1 from "../../../public/photo1.jpg";
+import photo2 from "../../../public/photo2.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -30,12 +32,7 @@ export default function AchievementsPage() {
     { name: "Rucha Rane", score: "72.80%", college: "HSC", img: "rucha-rane.jpg" }
   ];
 
-  const gallery = [
-    "achievement1.jpg", "achievement2.jpg", "achievement3.jpg", "achievement4.jpg", "achievement5.jpg",
-    "IMG-20260617-WA0011.jpg", "IMG-20260617-WA0013.jpg", "IMG-20260617-WA0016.jpg", "IMG-20260617-WA0017.jpg",
-    "IMG-20260617-WA0018.jpg", "IMG-20260617-WA0019.jpg", "IMG-20260617-WA0021.jpg", "IMG-20260617-WA0024.jpg",
-    "IMG-20260617-WA0030.jpg", "IMG-20260617-WA0031.jpg", "IMG-20260617-WA0035.jpg", "IMG-20260617-WA0036.jpg"
-  ];
+
 
   return (
     <main className="min-h-screen pt-20">
@@ -74,22 +71,48 @@ export default function AchievementsPage() {
         </div>
       </section>
 
-      {/* Achievement Gallery */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/30">
+      {/* Yearly Toppers Section */}
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/30 border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Life at <span className="text-orange-500">Anurag Classes</span></h2>
-            <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
-            <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 font-medium">Moments of joy, learning, and celebration.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {gallery.map((img, i) => (
-              <motion.div key={i} {...fadeIn} className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-md group border-4 border-white dark:border-slate-800">
-                <Image src={`/achievements/${img}`} alt="Event" fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 relative">
+            
+            {/* 2024 Toppers */}
+            <div className="flex flex-col items-center">
+              <motion.div {...fadeIn} className="w-full max-w-xl">
+                <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-6 text-center">
+                  Toppers of <span className="text-orange-500">2024</span>
+                </h3>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900 group hover:shadow-orange-500/10 transition-all duration-300">
+                  <Image
+                    src={photo1}
+                    alt="Toppers of 2024"
+                    placeholder="blur"
+                    className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
               </motion.div>
-            ))}
+            </div>
+
+            {/* Vertical Divider (Desktop Only) */}
+            <div className="hidden md:block absolute left-1/2 top-6 bottom-6 w-[1.5px] bg-slate-200 dark:bg-slate-800 -translate-x-1/2"></div>
+
+            {/* 2025 Toppers */}
+            <div className="flex flex-col items-center">
+              <motion.div {...fadeIn} transition={{ delay: 0.15 }} className="w-full max-w-xl">
+                <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-6 text-center">
+                  Toppers of <span className="text-orange-500">2025</span>
+                </h3>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900 group hover:shadow-orange-500/10 transition-all duration-300">
+                  <Image
+                    src={photo2}
+                    alt="Toppers of 2025"
+                    placeholder="blur"
+                    className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+              </motion.div>
+            </div>
+
           </div>
         </div>
       </section>
