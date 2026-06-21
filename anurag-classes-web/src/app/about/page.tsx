@@ -41,17 +41,17 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-12 gap-16 items-start">
             <motion.div {...fadeIn} className="lg:col-span-5 space-y-6">
               <div className="relative aspect-[3/4.2] rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
-                <Image src="/founder/founder-main.jpg" alt="Prof. Anandkumar Sonkar" fill className="object-cover" />
+                <Image src="/founder/founder(high Q).jpg" alt="Prof. Anandkumar Sonkar" fill className="object-cover" />
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
-                  <Image src="/founder/founder-award-1.jpg" alt="Award" fill className="object-cover" />
+                  <Image src="/founder/founder(high quality).jpg" alt="Award" fill className="object-cover" />
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
                   <Image src="/founder/founder-award-2.jpg" alt="Award Ceremony" fill className="object-cover" />
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
-                  <Image src="/achievements/achievement1.jpg" alt="Award Presentation" fill className="object-cover" />
+                  <Image src="/founder/founder-award-3.jpg" alt="Award Presentation" fill className="object-cover" />
                 </div>
               </div>
             </motion.div>
