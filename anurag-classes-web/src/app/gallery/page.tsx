@@ -63,9 +63,11 @@ export default function GalleryPage() {
     {
       title: "Sports and Annual Activity Program",
       images: [
-        "IMG-20260619-WA0018.jpg",
-        "IMG-20260619-WA0019.jpg",
-        "IMG-20260619-WA0019(1).jpg"
+        "Sports and Annual Activity Program/IMG-20260625-WA0000.jpg",
+        "Sports and Annual Activity Program/IMG-20260625-WA0002.jpg",
+        "Sports and Annual Activity Program/IMG-20260625-WA0003.jpg",
+        "Sports and Annual Activity Program/IMG-20260625-WA0005.jpg",
+        "Sports and Annual Activity Program/IMG-20260625-WA0006.jpg"
       ]
     },
     {

@@ -45,7 +45,7 @@ export default function AboutPage() {
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
-                  <Image src="/founder/founder(high quality).jpg" alt="Award" fill className="object-cover" />
+                  <Image src="/achievements/IMG-20260617-WA0035.jpg" alt="Award" fill className="object-cover" />
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
                   <Image src="/founder/founder-award-2.jpg" alt="Award Ceremony" fill className="object-cover" />
@@ -187,6 +187,93 @@ export default function AboutPage() {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Team / Faculty Section */}
+      <section className="py-20 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeIn} className="text-center mb-16">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest mb-4">Leadership & Faculty</div>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">
+              Meet our <span className="text-orange-500">Team & Faculty</span>
+            </h2>
+            <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full mb-6"></div>
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-lg mx-auto">Tap on a card to learn more</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Dr. Rajesh Sharma",
+                role: "CO-FOUNDER & DIRECTOR",
+                badge: "Ph.D. in Chemistry | 15+ Yrs Experience",
+                desc: "Dr. Rajesh Sharma is a passionate educator who has mentored thousands of students for competitive exams."
+              },
+              {
+                name: "Prof. Sunita Patil",
+                role: "HEAD OF PHYSICS",
+                badge: "M.Sc. Physics | Expert Mentor",
+                desc: "Prof. Sunita Patil is known for making physics concepts simple, intuitive, and highly engaging."
+              },
+              {
+                name: "Amit Verma",
+                role: "HEAD OF MATHEMATICS",
+                badge: "IIT Graduate | Mathematics Wizard",
+                desc: "Amit Verma focuses on building strong foundations and problem-solving techniques for JEE/CET."
+              },
+              {
+                name: "Dr. Neha Gupta",
+                role: "BIOLOGY SPECIALIST",
+                badge: "M.D. in Medicine | NEET Trainer",
+                desc: "Dr. Neha Gupta combines academic concepts with real-world examples to help students excel in NEET."
+              },
+              {
+                name: "Sanjay Joshi",
+                role: "SENIOR CONSULTANT",
+                badge: "Academic Advisor | 20+ Yrs Exp",
+                desc: "Sanjay Joshi provides career guidance and strategies to help students navigate their academic goals."
+              },
+              {
+                name: "Pooja Mehta",
+                role: "STUDENT COUNSELOR",
+                badge: "Psychologist | Student Mentor",
+                desc: "Pooja Mehta focuses on student well-being, stress management, and maintaining high motivation."
+              }
+            ].map((member, i) => (
+              <motion.div
+                key={i}
+                {...fadeIn}
+                transition={{ delay: i * 0.05 }}
+                className="bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-2xl hover:shadow-orange-500/5 transition-all duration-300"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-200 dark:bg-slate-700">
+                  <Image
+                    src="/founder/founder-main.jpg"
+                    alt={member.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 tracking-widest uppercase mb-1 block">
+                      {member.role}
+                    </span>
+                    <h3 className="text-xl font-black text-slate-900 dark:text-white mb-3">
+                      {member.name}
+                    </h3>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold mb-4">
+                      ⭐ {member.badge}
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                      {member.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
