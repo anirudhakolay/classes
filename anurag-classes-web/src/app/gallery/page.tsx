@@ -39,25 +39,53 @@ export default function GalleryPage() {
     {
       title: "Pre-Board Practice Paper Examination",
       images: [
-        "IMG-20260619-WA0007.jpg",
-        "IMG-20260619-WA0008.jpg",
-        "IMG-20260619-WA0009.jpg"
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0013.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0014.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0015.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0017.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0018.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0019.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0021.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0022.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0023.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0024.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0026.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0027.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0028.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0029.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0030.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0031.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0034.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0035.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0036.jpg",
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0037.jpg",
+        "Pre-Board Practice Paper Examination/WhatsApp Image 2026-06-24 at 11.25.36 PM.jpeg"
       ]
     },
     {
       title: "Seminar & Science Exhibition",
       images: [
-        "IMG-20260619-WA0010.jpg",
-        "IMG-20260619-WA0013.jpg",
-        "IMG-20260619-WA0014.jpg"
+        "Seminar & Science Exhibition/IMG-20260625-WA0038.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0039.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0040.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0041.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0042.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0043.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0045.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0046.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0047.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0048.jpg",
+        "Seminar & Science Exhibition/IMG-20260625-WA0049.jpg"
       ]
     },
     {
       title: "Welcome Ceremony and Cultural Program",
       images: [
-        "IMG-20260619-WA0015.jpg",
-        "IMG-20260619-WA0016.jpg",
-        "IMG-20260619-WA0017.jpg"
+        "Welcome Ceremony and Cultural Program/IMG-20260619-WA0001.jpg",
+        "Welcome Ceremony and Cultural Program/IMG-20260619-WA0002(1).jpg",
+        "Welcome Ceremony and Cultural Program/IMG-20260619-WA0007(1).jpg",
+        "Welcome Ceremony and Cultural Program/IMG-20260619-WA0011.jpg",
+        "Welcome Ceremony and Cultural Program/IMG-20260619-WA0019(2).jpg"
       ]
     },
     {
@@ -73,9 +101,48 @@ export default function GalleryPage() {
     {
       title: "Annual Class Picnic",
       images: [
-        "IMG-20260619-WA0000(1).jpg",
-        "IMG-20260619-WA0001(1).jpg",
-        "IMG-20260619-WA0004.jpg"
+        "Annual Class Picnic/IMG-20260625-WA0057.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0064.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0067.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0069.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0071.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0074.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0076.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0080.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0088.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0089.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0096.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0099.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0101.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0103.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0106.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0107.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0114.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0120.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0125.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0126.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0130.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0134.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0135.jpg",
+        "Annual Class Picnic/IMG-20260625-WA0136.jpg"
+      ]
+    },
+    {
+      title: "Social Work",
+      images: [
+        "Social Work/IMG-20260625-WA0050.jpg",
+        "Social Work/IMG-20260625-WA0100.jpg",
+        "Social Work/IMG-20260625-WA0112.jpg",
+        "Social Work/IMG-20260625-WA0127.jpg",
+        "Social Work/IMG-20260625-WA0139.jpg",
+        "Social Work/IMG-20260625-WA0141.jpg",
+        "Social Work/IMG-20260625-WA0142.jpg",
+        "Social Work/IMG-20260625-WA0143.jpg",
+        "Social Work/IMG-20260625-WA0144.jpg",
+        "Social Work/IMG-20260625-WA0146.jpg",
+        "Social Work/IMG-20260625-WA0147.jpg",
+        "Social Work/IMG-20260625-WA0148.jpg",
+        "Social Work/VID-20260625-WA0153.mp4"
       ]
     },
     {
@@ -222,14 +289,32 @@ export default function GalleryPage() {
                       onClick={() => openLightbox(i)}
                       className="relative aspect-square rounded-2xl overflow-hidden shadow-md group border-4 border-white dark:border-slate-800 cursor-pointer hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
                     >
-                      <Image
-                        src={`/gallery/${img}`}
-                        alt={`${albums[selectedAlbumIdx].title} Photo ${i + 1}`}
-                        fill
-                        className="object-cover"
-                      />
+                      {img.toLowerCase().endsWith('.mp4') ? (
+                        <div className="relative w-full h-full bg-black flex items-center justify-center">
+                          <video
+                            src={`/gallery/${img}`}
+                            className="w-full h-full object-cover"
+                            muted
+                            loop
+                            playsInline
+                            autoPlay
+                          />
+                          <div className="absolute top-3 left-3 bg-black/75 backdrop-blur-md px-2 py-1 rounded-md text-[10px] font-bold text-white z-10">
+                            VIDEO
+                          </div>
+                        </div>
+                      ) : (
+                        <Image
+                          src={`/gallery/${img}`}
+                          alt={`${albums[selectedAlbumIdx].title} Photo ${i + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span className="text-white text-xs font-black bg-orange-500/80 px-3 py-1.5 rounded-full shadow-sm">View Photo</span>
+                        <span className="text-white text-xs font-black bg-orange-500/80 px-3 py-1.5 rounded-full shadow-sm">
+                          {img.toLowerCase().endsWith('.mp4') ? "Play Video" : "View Photo"}
+                        </span>
                       </div>
                     </motion.div>
                   ))}
@@ -286,13 +371,22 @@ export default function GalleryPage() {
                   transition={{ duration: 0.3 }}
                   className="relative w-full h-full"
                 >
-                  <Image
-                    src={`/gallery/${albums[selectedAlbumIdx].images[activeImageIdx]}`}
-                    alt={`${albums[selectedAlbumIdx].title} - Photo ${activeImageIdx + 1}`}
-                    fill
-                    className="object-contain"
-                    priority
-                  />
+                  {albums[selectedAlbumIdx].images[activeImageIdx].toLowerCase().endsWith('.mp4') ? (
+                    <video
+                      src={`/gallery/${albums[selectedAlbumIdx].images[activeImageIdx]}`}
+                      controls
+                      autoPlay
+                      className="max-w-full max-h-full rounded-lg shadow-2xl"
+                    />
+                  ) : (
+                    <Image
+                      src={`/gallery/${albums[selectedAlbumIdx].images[activeImageIdx]}`}
+                      alt={`${albums[selectedAlbumIdx].title} - Photo ${activeImageIdx + 1}`}
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  )}
                 </motion.div>
               </div>
 
@@ -317,12 +411,20 @@ export default function GalleryPage() {
                       : "border-transparent opacity-50 hover:opacity-100"
                   }`}
                 >
-                  <Image
-                    src={`/gallery/${img}`}
-                    alt="Thumbnail"
-                    fill
-                    className="object-cover"
-                  />
+                  {img.toLowerCase().endsWith('.mp4') ? (
+                    <video
+                      src={`/gallery/${img}`}
+                      className="w-full h-full object-cover"
+                      muted
+                    />
+                  ) : (
+                    <Image
+                      src={`/gallery/${img}`}
+                      alt="Thumbnail"
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </button>
               ))}
             </div>
