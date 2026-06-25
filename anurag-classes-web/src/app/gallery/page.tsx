@@ -22,22 +22,12 @@ export default function GalleryPage() {
     {
       title: "Annual Function & Farewell Party",
       images: [
-        "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.18.52 (1).jpeg",
-        "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.18.52.jpeg",
-        "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.03 (1).jpeg",
         "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.03.jpeg",
         "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.07.jpeg",
         "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.19.jpeg",
         "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.25.jpeg",
-        "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.26.jpeg",
-        "Annual Function & Farewell Party/WhatsApp Image 2026-06-24 at 23.19.32.jpeg",
-        "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.17 (1).mp4",
-        "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.17.mp4",
-        "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.18 (1).mp4",
         "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.18.mp4",
-        "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.34.mp4",
         "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.37.mp4",
-        "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.46.mp4",
         "Annual Function & Farewell Party/WhatsApp Video 2026-06-24 at 23.18.50.mp4"
       ]
     },
