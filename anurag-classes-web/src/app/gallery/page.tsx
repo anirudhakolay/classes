@@ -143,10 +143,6 @@ export default function GalleryPage() {
     {
       title: "Classroom",
       images: [
-        "IMG-20260619-WA0002.jpg",
-        "IMG-20260619-WA0006.jpg",
-        "IMG-20260619-WA0008.jpg",
-        "IMG-20260619-WA0013.jpg",
         "Classroom/IMG-20260625-WA0014.jpg",
         "Classroom/IMG-20260625-WA0028.jpg",
         "Classroom/IMG-20260625-WA0035.jpg",
