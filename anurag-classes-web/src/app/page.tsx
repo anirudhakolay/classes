@@ -86,12 +86,6 @@ export default function Home() {
     transition: { duration: 0.6 }
   };
 
-  const toppersPreview = [
-    { name: "Shreyas Makhamle", score: "95.60%", rank: "🥇", img: "shreyas-makhamle.jpg" },
-    { name: "Princy Dubey", score: "90.17%", rank: "🥈", img: "princy-dubey.jpg" },
-    { name: "Gargi Gokhale", score: "83.00%", rank: "🥉", img: "gargi-gokhale.jpg" },
-    { name: "Neha Yadav", score: "83.00%", rank: "🏅", img: "neha-yadav.jpg" }
-  ];
 
   return (
     <main className="min-h-screen">
@@ -245,18 +239,21 @@ export default function Home() {
             <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-16 max-w-5xl mx-auto">
-            {toppersPreview.map((t, i) => (
-              <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} viewport={{ once: true }} className="bg-white dark:bg-slate-800 rounded-3xl p-5 shadow-sm border border-slate-100 dark:border-slate-700 text-center flex flex-col items-center">
-                <div className="w-full aspect-[3/4] rounded-2xl bg-slate-50 dark:bg-slate-700 mb-4 overflow-hidden border-2 border-orange-500/10 relative">
-                  <Image src={`/toppers/${t.img}`} alt={t.name} fill className="object-cover" />
-                  {t.rank && <span className="absolute top-2 right-2 text-2xl z-10">{t.rank}</span>}
-                </div>
-                <h4 className="font-black text-slate-900 dark:text-white text-sm sm:text-base leading-tight mb-1">{t.name}</h4>
-                <div className="text-orange-500 font-black text-2xl">{t.score}</div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            viewport={{ once: true }} 
+            className="max-w-5xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-2"
+          >
+            <Image 
+              src="/achievements/Page 3.png" 
+              alt="Our Toppers" 
+              width={1200} 
+              height={800} 
+              className="w-full h-auto object-contain rounded-2xl" 
+              priority
+            />
+          </motion.div>
 
           <Link href="/achievements" className="px-10 py-4 rounded-full bg-white dark:bg-slate-800 border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">Wall of Fame</Link>
         </div>
