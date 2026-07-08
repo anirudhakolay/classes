@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  BookOpen, 
+import {
+  BookOpen,
   Phone,
   ArrowRight,
   Microscope,
@@ -18,11 +18,11 @@ import Image from "next/image";
 
 export default function Home() {
   const carouselImages = [
-    "https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"
+    "/banner/1.png",
+    "/banner/2.png",
+    "/banner/3.png",
+    "/banner/4.png",
+    "/banner/5.png"
   ];
 
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -107,17 +107,17 @@ export default function Home() {
 
       {/* Full-bleed Banner Carousel Section */}
       <section className="w-full relative overflow-hidden group aspect-[3/1] md:aspect-[4/1] lg:aspect-[5/1] max-h-[300px] shadow-lg">
-        <div 
+        <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           onTransitionEnd={handleTransitionEnd}
         >
           {displayImages.map((img, idx) => (
             <div key={idx} className="relative w-full h-full flex-shrink-0">
-              <Image 
-                src={img} 
-                alt={`Slide ${idx + 1}`} 
-                fill 
+              <Image
+                src={img}
+                alt={`Slide ${idx + 1}`}
+                fill
                 className="object-cover"
                 priority={idx === 1}
               />
@@ -126,13 +126,13 @@ export default function Home() {
         </div>
 
         {/* Manual Controls */}
-        <button 
+        <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button 
+        <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
@@ -142,7 +142,7 @@ export default function Home() {
         {/* Indicators */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
           {carouselImages.map((_, idx) => (
-            <button 
+            <button
               key={idx}
               onClick={() => handleDotClick(idx)}
               className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${idx === getActiveIndex() ? "bg-orange-500 w-8" : "bg-white/60"}`}
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-16 relative">
             <div className="flex justify-center mb-6">
-               <Image src="/logo.jpg" alt="Logo" width={96} height={96} className="rounded-2xl shadow-lg" />
+              <Image src="/logo.jpg" alt="Logo" width={96} height={96} className="rounded-2xl shadow-lg" />
             </div>
             <div className="inline-block px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest mb-4 border border-orange-500/20">
               Why Choose Us
@@ -167,25 +167,25 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
-              { 
-                icon: <Users className="w-6 h-6" />, 
-                title: "Expert Mentorship", 
-                desc: "Learn from highly qualified educators who simplify complex topics into easy-to-understand concepts." 
+              {
+                icon: <Users className="w-6 h-6" />,
+                title: "Expert Mentorship",
+                desc: "Learn from highly qualified educators who simplify complex topics into easy-to-understand concepts."
               },
-              { 
-                icon: <LayoutGrid className="w-6 h-6" />, 
-                title: "Optimum Batch Size", 
-                desc: "We maintain limited students per batch to ensure every individual gets the attention they need to grow." 
+              {
+                icon: <LayoutGrid className="w-6 h-6" />,
+                title: "Optimum Batch Size",
+                desc: "We maintain limited students per batch to ensure every individual gets the attention they need to grow."
               },
-              { 
-                icon: <ClipboardCheck className="w-6 h-6" />, 
-                title: "Rigorous Assessment", 
-                desc: "Weekly chapter-wise tests and monthly full-length mock exams to track progress and build confidence." 
+              {
+                icon: <ClipboardCheck className="w-6 h-6" />,
+                title: "Rigorous Assessment",
+                desc: "Weekly chapter-wise tests and monthly full-length mock exams to track progress and build confidence."
               }
             ].map((feature, i) => (
-              <motion.div 
-                key={i} 
-                {...fadeIn} 
+              <motion.div
+                key={i}
+                {...fadeIn}
                 transition={{ delay: i * 0.1 }}
                 className="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all group"
               >
