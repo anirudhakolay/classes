@@ -19,6 +19,77 @@ const stagger = {
   transition: { staggerChildren: 0.1 }
 };
 
+const facultyData = [
+  {
+    name: "Avinash Magar",
+    role: "MATHS FACULTY",
+    badge: "Msc Maths, B.ED | 15+ Yrs Exp",
+    desc: "Avinash Magar sir focuses on building strong foundations and problem-solving techniques for mathematics.",
+    image: "/avinash.jpg"
+  },
+  {
+    name: "Ravi Patil Sir",
+    role: "CHEMISTRY FACULTY",
+    badge: "Msc (Organic Chemistry) | 15+ Yrs Exp",
+    desc: "Ravi Patil sir specializes in Chemistry Part II for JEE, NEET, and CET preparation.",
+    image: "/ravi.jpg"
+  },
+  {
+    name: "Sahil Patel",
+    role: "PHYSICS FACULTY",
+    badge: "M.Sc. in Physics, B.Ed. | SET Qualified",
+    desc: "Sahil Patel sir is an expert in Physics with 12+ years of teaching experience.",
+    image: "/sahil patel.jpg"
+  },
+  {
+    name: "Jitendra Kumar Chaurasia",
+    role: "BIOLOGY FACULTY",
+    badge: "M.Sc. (Biology) | 5+ Yrs Exp",
+    desc: "Jitendra Kumar Chaurasia sir is a Biology expert with over 5 years of teaching experience.",
+    image: "/Jitendra.jpg"
+  },
+  {
+    name: "Mr. Sangharatna Balkhande",
+    role: "PHYSICS FACULTY",
+    badge: "M.Sc. Physics, B.Ed. | 6+ Yrs Exp",
+    desc: "Mr. Sangharatna Balkhande sir has 6+ years of teaching experience in CBSE, STATE BOARD, JEE, NEET, and CET.",
+    image: "/sangharatna.jpeg"
+  }
+];
+
+const FacultyCard = ({ member, index }: { member: any, index: number }) => (
+  <motion.div
+    {...fadeIn}
+    transition={{ delay: index * 0.05 }}
+    className="bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-2xl hover:shadow-orange-500/5 transition-all duration-300"
+  >
+    <div className="relative aspect-square w-full overflow-hidden bg-slate-200 dark:bg-slate-700">
+      <Image
+        src={member.image || "/founder/founder-main.jpg"}
+        alt={member.name}
+        fill
+        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div className="p-6 flex-1 flex flex-col justify-between">
+      <div>
+        <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 tracking-widest uppercase mb-1 block">
+          {member.role}
+        </span>
+        <h3 className="text-xl font-black text-slate-900 dark:text-white mb-3">
+          {member.name}
+        </h3>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold mb-4">
+          ⭐ {member.badge}
+        </div>
+        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          {member.desc}
+        </p>
+      </div>
+    </div>
+  </motion.div>
+);
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-20">
@@ -202,69 +273,17 @@ export default function AboutPage() {
             <p className="text-slate-500 dark:text-slate-400 text-sm max-w-lg mx-auto">Tap on a card to learn more</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {[
-              {
-                name: "Avinash Magar",
-                role: "MATHS FACULTY",
-                badge: "Msc Maths, B.ED | 15+ Yrs Exp",
-                desc: "Avinash Magar sir focuses on building strong foundations and problem-solving techniques for mathematics.",
-                image: "/avinash.jpg"
-              },
-              {
-                name: "Ravi Patil Sir",
-                role: "CHEMISTRY FACULTY",
-                badge: "Msc (Organic Chemistry) | 15+ Yrs Exp",
-                desc: "Ravi Patil sir specializes in Chemistry Part II for JEE, NEET, and CET preparation.",
-                image: "/ravi.jpg"
-              },
-              {
-                name: "Sahil Patel",
-                role: "PHYSICS FACULTY",
-                badge: "M.Sc. in Physics, B.Ed. | SET Qualified",
-                desc: "Sahil Patel sir is an expert in Physics with 12+ years of teaching experience.",
-                image: "/sahil patel.jpg"
-              },
-              {
-                name: "Jitendra Kumar Chaurasia",
-                role: "BIOLOGY FACULTY",
-                badge: "M.Sc. (Biology) | 5+ Yrs Exp",
-                desc: "Jitendra Kumar Chaurasia sir is a Biology expert with over 5 years of teaching experience.",
-                image: "/Jitendra.jpg"
-              }
-            ].map((member, i) => (
-              <motion.div
-                key={i}
-                {...fadeIn}
-                transition={{ delay: i * 0.05 }}
-                className="bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-2xl hover:shadow-orange-500/5 transition-all duration-300"
-              >
-                <div className="relative aspect-square w-full overflow-hidden bg-slate-200 dark:bg-slate-700">
-                  <Image
-                    src={member.image || "/founder/founder-main.jpg"}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 tracking-widest uppercase mb-1 block">
-                      {member.role}
-                    </span>
-                    <h3 className="text-xl font-black text-slate-900 dark:text-white mb-3">
-                      {member.name}
-                    </h3>
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold mb-4">
-                      ⭐ {member.badge}
-                    </div>
-                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                      {member.desc}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex flex-col gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {facultyData.slice(0, 3).map((member, i) => (
+                <FacultyCard key={i} member={member} index={i} />
+              ))}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:w-2/3 mx-auto w-full">
+              {facultyData.slice(3).map((member, i) => (
+                <FacultyCard key={i + 3} member={member} index={i + 3} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
