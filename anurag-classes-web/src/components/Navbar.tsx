@@ -40,7 +40,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex-shrink-0 flex items-center">
             <div className="flex items-center gap-3">
-              <Image src="/logo.jpg" alt="Anurag Classes" width={48} height={48} className="rounded-full shadow-sm" priority />
+              <Image src="/logo.png" alt="Anurag Classes" width={48} height={48} className="rounded-full shadow-sm" priority />
               <div className="flex flex-col">
                 <span className="font-bold text-lg sm:text-xl text-slate-900 dark:text-white leading-tight">Anurag Classes</span>
                 <span className="text-[10px] sm:text-xs text-orange-500 font-bold uppercase tracking-wider">since 2015</span>
