@@ -19,7 +19,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <Image src="/logo.jpg" alt="Anurag Classes" width={48} height={48} className="rounded-full shadow-sm" />
+              <Image src="/logo.png" alt="Anurag Classes" width={48} height={48} className="rounded-full shadow-sm" />
               <div className="flex flex-col">
                 <span className="font-bold text-xl text-slate-900 dark:text-white leading-tight">Anurag Classes</span>
                 <span className="text-xs text-orange-500 font-bold uppercase tracking-wider">since 2015</span>
