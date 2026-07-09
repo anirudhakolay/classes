@@ -53,7 +53,7 @@ const facultyData = [
     role: "PHYSICS FACULTY",
     badge: "M.Sc. Physics, B.Ed. | 6+ Yrs Exp",
     desc: "Mr. Sangharatna Balkhande sir has 6+ years of teaching experience in CBSE, STATE BOARD, JEE, NEET, and CET.",
-    image: "/sangharatna.jpeg"
+    image: "/sangharatna_new.png"
   }
 ];
 
