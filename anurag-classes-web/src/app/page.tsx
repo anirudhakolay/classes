@@ -18,10 +18,10 @@ import Image from "next/image";
 
 export default function Home() {
   const carouselImages = [
-    "/banner/1.png",
-    "/banner/2.png",
-    "/banner/3.png",
-    "/banner/4.png"
+    { mobile: "/banner/1.png", pc: "/image.jpg" },
+    { mobile: "/banner/2.png", pc: "/image (1).jpg" },
+    { mobile: "/banner/3.png", pc: "/image (2).jpg" },
+    { mobile: "/banner/4.png", pc: "/image (3).jpg" }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Full-bleed Banner Carousel Section */}
-      <section className="w-full relative overflow-hidden group aspect-[16/9] sm:aspect-[2/1] md:aspect-[3/1] lg:aspect-[10/3] shadow-lg bg-slate-100 dark:bg-slate-900">
+      <section className="w-full relative overflow-hidden group aspect-[3/1] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900">
         <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -113,11 +113,20 @@ export default function Home() {
         >
           {displayImages.map((img, idx) => (
             <div key={idx} className="relative w-full h-full flex-shrink-0">
+              {/* Mobile Image (3:1) */}
               <Image
-                src={img}
-                alt={`Slide ${idx + 1}`}
+                src={img.mobile}
+                alt={`Slide ${idx + 1} Mobile`}
                 fill
-                className="object-contain"
+                className="object-contain md:hidden"
+                priority={idx === 1}
+              />
+              {/* PC Image (5:1) */}
+              <Image
+                src={img.pc}
+                alt={`Slide ${idx + 1} PC`}
+                fill
+                className="object-contain hidden md:block"
                 priority={idx === 1}
               />
             </div>
