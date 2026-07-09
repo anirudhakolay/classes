@@ -202,43 +202,35 @@ export default function AboutPage() {
             <p className="text-slate-500 dark:text-slate-400 text-sm max-w-lg mx-auto">Tap on a card to learn more</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {[
               {
-                name: "Dr. Rajesh Sharma",
-                role: "CO-FOUNDER & DIRECTOR",
-                badge: "Ph.D. in Chemistry | 15+ Yrs Experience",
-                desc: "Dr. Rajesh Sharma is a passionate educator who has mentored thousands of students for competitive exams."
+                name: "Avinash Magar",
+                role: "MATHS FACULTY",
+                badge: "Msc Maths, B.ED | 15+ Yrs Exp",
+                desc: "Avinash Magar sir focuses on building strong foundations and problem-solving techniques for mathematics.",
+                image: "/avinash.jpg"
               },
               {
-                name: "Prof. Sunita Patil",
-                role: "HEAD OF PHYSICS",
-                badge: "M.Sc. Physics | Expert Mentor",
-                desc: "Prof. Sunita Patil is known for making physics concepts simple, intuitive, and highly engaging."
+                name: "Ravi Patil Sir",
+                role: "CHEMISTRY FACULTY",
+                badge: "Msc (Organic Chemistry) | 15+ Yrs Exp",
+                desc: "Ravi Patil sir specializes in Chemistry Part II for JEE, NEET, and CET preparation.",
+                image: "/ravi.jpg"
               },
               {
-                name: "Amit Verma",
-                role: "HEAD OF MATHEMATICS",
-                badge: "IIT Graduate | Mathematics Wizard",
-                desc: "Amit Verma focuses on building strong foundations and problem-solving techniques for JEE/CET."
+                name: "Sahil Patel",
+                role: "PHYSICS FACULTY",
+                badge: "M.Sc. in Physics, B.Ed. | SET Qualified",
+                desc: "Sahil Patel sir is an expert in Physics with 12+ years of teaching experience.",
+                image: "/sahil patel.jpg"
               },
               {
-                name: "Dr. Neha Gupta",
-                role: "BIOLOGY SPECIALIST",
-                badge: "M.D. in Medicine | NEET Trainer",
-                desc: "Dr. Neha Gupta combines academic concepts with real-world examples to help students excel in NEET."
-              },
-              {
-                name: "Sanjay Joshi",
-                role: "SENIOR CONSULTANT",
-                badge: "Academic Advisor | 20+ Yrs Exp",
-                desc: "Sanjay Joshi provides career guidance and strategies to help students navigate their academic goals."
-              },
-              {
-                name: "Pooja Mehta",
-                role: "STUDENT COUNSELOR",
-                badge: "Psychologist | Student Mentor",
-                desc: "Pooja Mehta focuses on student well-being, stress management, and maintaining high motivation."
+                name: "Jitendra Kumar Chaurasia",
+                role: "BIOLOGY FACULTY",
+                badge: "M.Sc. (Biology) | 5+ Yrs Exp",
+                desc: "Jitendra Kumar Chaurasia sir is a Biology expert with over 5 years of teaching experience.",
+                image: "/Jitendra.jpg"
               }
             ].map((member, i) => (
               <motion.div
@@ -247,12 +239,12 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.05 }}
                 className="bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col group hover:shadow-2xl hover:shadow-orange-500/5 transition-all duration-300"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-200 dark:bg-slate-700">
+                <div className="relative aspect-square w-full overflow-hidden bg-slate-200 dark:bg-slate-700">
                   <Image
-                    src="/founder/founder-main.jpg"
+                    src={member.image || "/founder/founder-main.jpg"}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 flex-1 flex flex-col justify-between">

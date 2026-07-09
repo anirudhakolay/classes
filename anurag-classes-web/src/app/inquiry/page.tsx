@@ -171,10 +171,10 @@ const [isSubmitted, setIsSubmitted] = useState(false);
               <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-800">
                 <h4 className="text-lg font-bold text-orange-500 mb-2">New Panvel Branch</h4>
                 <p className="text-slate-700 dark:text-slate-400 text-sm leading-relaxed font-medium">
-                  Shop No. 33 & 34/29<br/>
-                  Near Bantia School, Sector 13<br/>
-                  New Panvel East<br/>
-                  Panvel, Maharashtra – 410206
+                  Janta Market Shop No-29/33/34<br/>
+                  Opposite Icchapurti Sai Mandir,<br/>
+                  Near Banthia High School,<br/>
+                  Sector-13, New Panvel - 410206
                 </p>
               </div>
               
