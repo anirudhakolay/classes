@@ -21,38 +21,38 @@ const stagger = {
 
 const facultyData = [
   {
-    name: "Avinash Magar",
+    name: "Prof. Avinash Magar",
     role: "MATHS FACULTY",
     badge: "Msc Maths, B.ED | 15+ Yrs Exp",
-    desc: "Avinash Magar sir focuses on building strong foundations and problem-solving techniques for mathematics.",
+    desc: "Prof. Avinash Magar focuses on building strong foundations and problem-solving techniques for mathematics.",
     image: "/avinash.jpg"
   },
   {
-    name: "Ravi Patil Sir",
+    name: "Prof. Ravi Patil",
     role: "CHEMISTRY FACULTY",
     badge: "Msc (Organic Chemistry) | 15+ Yrs Exp",
-    desc: "Ravi Patil sir specializes in Chemistry Part II for JEE, NEET, and CET preparation.",
+    desc: "Prof. Ravi Patil specializes in Chemistry Part II for JEE, NEET, and CET preparation.",
     image: "/ravi.jpg"
   },
   {
-    name: "Sahil Patel",
+    name: "Prof. Sahil Patel",
     role: "PHYSICS FACULTY",
     badge: "M.Sc. in Physics, B.Ed. | SET Qualified",
-    desc: "Sahil Patel sir is an expert in Physics with 12+ years of teaching experience.",
+    desc: "Prof. Sahil Patel is an expert in Physics with 12+ years of teaching experience.",
     image: "/sahil patel.jpg"
   },
   {
-    name: "Jitendra Kumar Chaurasia",
+    name: "Prof. Jitendra Kumar Chaurasia",
     role: "BIOLOGY FACULTY",
     badge: "M.Sc. (Biology) | 5+ Yrs Exp",
-    desc: "Jitendra Kumar Chaurasia sir is a Biology expert with over 5 years of teaching experience.",
+    desc: "Prof. Jitendra Kumar Chaurasia is a Biology expert with over 5 years of teaching experience.",
     image: "/Jitendra.jpg"
   },
   {
-    name: "Mr. Sangharatna Balkhande",
+    name: "Prof. Sangharatna Balkhande",
     role: "PHYSICS FACULTY",
     badge: "M.Sc. Physics, B.Ed. | 6+ Yrs Exp",
-    desc: "Mr. Sangharatna Balkhande sir has 6+ years of teaching experience in CBSE, STATE BOARD, JEE, NEET, and CET.",
+    desc: "Prof. Sangharatna Balkhande has 6+ years of teaching experience in CBSE, STATE BOARD, JEE, NEET, and CET.",
     image: "/sangharatna_new.png"
   }
 ];
