@@ -89,23 +89,19 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 sm:pt-32 md:pt-40 lg:pt-36 px-4 flex flex-col items-center justify-center relative text-center">
+      <section className="pt-24 pb-4 sm:pt-32 md:pt-40 lg:pt-36 px-4 flex flex-col items-center justify-center relative text-center">
         <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-5 dark:opacity-10 pointer-events-none" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070&auto=format&fit=crop')" }} />
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="max-w-4xl mx-auto z-10">
           <div className="inline-block mb-6 px-5 py-2 rounded-full glass border-orange-500/20 text-sm font-semibold text-orange-600 dark:text-orange-400 tracking-widest">
             CBSE | ICSE | STATE BOARD | SCIENCE | COMMERCE | NEET | JEE | MHT-CET
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white leading-[1.1]">Building Strong Foundations for <span className="text-orange-500">Academic Success</span></h1>
-          <p className="text-lg md:text-xl text-slate-800 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">At Anurag Classes, we believe every student has the potential to excel. With experienced faculty, personalized attention, and a result-oriented approach.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link href="/inquiry" className="w-full sm:w-auto px-10 py-4 rounded-full bg-orange-500 text-white font-black text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all flex items-center justify-center">Enroll Now <ChevronRight className="ml-2 w-5 h-5" /></Link>
-            <div className="flex items-center glass rounded-full px-10 py-4 w-full sm:w-auto justify-center"><Phone className="w-5 h-5 mr-3 text-orange-500" /><span className="font-black text-xl text-slate-800 dark:text-slate-200 tracking-tight">7977338822</span></div>
-          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white leading-[1.1]">Building <span className="text-orange-500">Strong Base</span></h1>
+          <p className="text-lg md:text-xl text-slate-800 dark:text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed font-medium">At Anurag Classes, we believe every student has the potential to excel.</p>
         </motion.div>
       </section>
 
       {/* Full-bleed Banner Carousel Section */}
-      <section className="w-full relative overflow-hidden group aspect-[5/2] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900">
+      <section className="w-full overflow-hidden group aspect-[5/2] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900 mb-10">
         <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -159,12 +155,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Buttons */}
+      <section className="pb-16 px-4 flex justify-center">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <Link href="/inquiry" className="w-full sm:w-auto px-10 py-4 rounded-full bg-orange-500 text-white font-black text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all flex items-center justify-center">Enroll Now <ChevronRight className="ml-2 w-5 h-5" /></Link>
+          <a href="https://wa.me/917977338822" target="_blank" rel="noopener noreferrer" className="flex items-center glass rounded-full px-10 py-4 w-full sm:w-auto justify-center hover:shadow-lg transition-all"><Phone className="w-5 h-5 mr-3 text-orange-500" /><span className="font-black text-xl text-slate-800 dark:text-slate-200 tracking-tight">7977338822</span></a>
+        </div>
+      </section>
       {/* About Preview */}
       <section className="pt-24 relative z-10 bg-slate-50 dark:bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-16 relative">
             <div className="flex justify-center mb-6">
-              <Image src="/logo.jpg" alt="Logo" width={96} height={96} className="rounded-2xl shadow-lg" />
+              <Image src="/logo.png" alt="Logo" width={96} height={96} className="rounded-2xl shadow-lg" />
             </div>
             <div className="inline-block px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest mb-4 border border-orange-500/20">
               Why Choose Us
@@ -253,20 +256,20 @@ export default function Home() {
               { src: "/achievements/Page 3.png", alt: "HSC Science Result Kalamboli" },
               { src: "/achievements/Page 2.png", alt: "HSC Commerce & SSC Result" }
             ].map((img, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true }} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 className="rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-2"
               >
-                <Image 
-                  src={img.src} 
-                  alt={img.alt} 
-                  width={600} 
-                  height={800} 
-                  className="w-full h-auto object-contain rounded-2xl" 
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={600}
+                  height={800}
+                  className="w-full h-auto object-contain rounded-2xl"
                 />
               </motion.div>
             ))}

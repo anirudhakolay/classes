@@ -40,8 +40,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
             <motion.div {...fadeIn} className="lg:col-span-5 space-y-6">
-              <div className="relative aspect-[3/4.2] rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
-                <Image src="/founder/founder(high Q).jpg" alt="Prof. Anandkumar Sonkar" fill className="object-cover" />
+              <div className="relative aspect-[3/3.8] rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+                <Image src="/founder/founder-main2.jpg" alt="Prof. Anandkumar Sonkar" fill className="object-cover" />
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-slate-800">
