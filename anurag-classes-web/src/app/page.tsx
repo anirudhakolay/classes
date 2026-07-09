@@ -21,8 +21,7 @@ export default function Home() {
     "/banner/1.png",
     "/banner/2.png",
     "/banner/3.png",
-    "/banner/4.png",
-    "/banner/5.png"
+    "/banner/4.png"
   ];
 
   const [currentSlide, setCurrentSlide] = useState(1);
