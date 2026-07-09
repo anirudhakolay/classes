@@ -106,7 +106,7 @@ export default function Home() {
       </section>
 
       {/* Full-bleed Banner Carousel Section */}
-      <section className="w-full relative overflow-hidden group aspect-[3/1] md:aspect-[4/1] lg:aspect-[5/1] max-h-[300px] shadow-lg">
+      <section className="w-full relative overflow-hidden group aspect-[16/9] sm:aspect-[2/1] md:aspect-[3/1] lg:aspect-[10/3] shadow-lg bg-slate-100 dark:bg-slate-900">
         <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -118,7 +118,7 @@ export default function Home() {
                 src={img}
                 alt={`Slide ${idx + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority={idx === 1}
               />
             </div>
