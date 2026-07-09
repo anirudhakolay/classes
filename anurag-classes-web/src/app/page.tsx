@@ -239,21 +239,30 @@ export default function Home() {
             <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            viewport={{ once: true }} 
-            className="max-w-5xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-2"
-          >
-            <Image 
-              src="/achievements/Page 3.png" 
-              alt="Our Toppers" 
-              width={1200} 
-              height={800} 
-              className="w-full h-auto object-contain rounded-2xl" 
-              priority
-            />
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
+            {[
+              { src: "/achievements/Page 4.png", alt: "HSC Science Result New Panvel" },
+              { src: "/achievements/Page 3.png", alt: "HSC Science Result Kalamboli" },
+              { src: "/achievements/Page 2.png", alt: "HSC Commerce & SSC Result" }
+            ].map((img, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }} 
+                transition={{ delay: idx * 0.1 }}
+                className="rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-2"
+              >
+                <Image 
+                  src={img.src} 
+                  alt={img.alt} 
+                  width={600} 
+                  height={800} 
+                  className="w-full h-auto object-contain rounded-2xl" 
+                />
+              </motion.div>
+            ))}
+          </div>
 
           <Link href="/achievements" className="px-10 py-4 rounded-full bg-white dark:bg-slate-800 border-2 border-orange-500 text-orange-500 font-bold hover:bg-orange-500 hover:text-white transition-all">Wall of Fame</Link>
         </div>
