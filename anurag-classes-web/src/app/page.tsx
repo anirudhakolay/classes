@@ -19,10 +19,10 @@ import Image from "next/image";
 
 export default function Home() {
   const carouselImages = [
-    { mobile: "/banner/mobile_1.png", pc: "/banner/pc_1.png" },
-    { mobile: "/banner/mobile_2.png", pc: "/banner/pc_2.png" },
-    { mobile: "/banner/mobile_3.png", pc: "/banner/pc_3.png" },
-    { mobile: "/banner/mobile_4.png", pc: "/banner/pc_4.png" }
+    { mobile: "/banner/1.png", pc: "/banner/pc_1.png" },
+    { mobile: "/banner/2.png", pc: "/banner/pc_2.png" },
+    { mobile: "/banner/3.png", pc: "/banner/pc_3.png" },
+    { mobile: "/banner/4-1.png", pc: "/banner/pc_4.png" }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(1);
