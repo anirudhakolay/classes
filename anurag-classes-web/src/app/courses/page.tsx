@@ -40,7 +40,7 @@ export default function CoursesPage() {
       icon: <Calculator className="w-8 h-8 text-emerald-500" />,
       tag: "Professional Foundation",
       desc: "Preparing students for a successful career in business and finance with specialized commerce coaching.",
-      subjects: ['Accounts', 'Economics', 'Business Studies', 'Statistics', 'Mathematics'],
+      subjects: ['Accounts', 'Economics', 'Organization of Commerce & Management (OCM)', 'Secretarial Practice (SP)', 'Mathematics'],
       feature: "Concept Clarity & Real-world Practice"
     }
   ];

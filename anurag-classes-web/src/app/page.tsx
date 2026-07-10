@@ -10,7 +10,8 @@ import {
   LayoutGrid,
   ClipboardCheck,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  GraduationCap
 } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
@@ -18,10 +19,10 @@ import Image from "next/image";
 
 export default function Home() {
   const carouselImages = [
-    { mobile: "/banner/1.png", pc: "/image.jpg" },
-    { mobile: "/banner/2.png", pc: "/image (1).jpg" },
-    { mobile: "/banner/3.png", pc: "/image (2).jpg" },
-    { mobile: "/banner/4.png", pc: "/image (3).jpg" }
+    { mobile: "/banner/mobile_1.png", pc: "/banner/pc_1.png" },
+    { mobile: "/banner/mobile_2.png", pc: "/banner/pc_2.png" },
+    { mobile: "/banner/mobile_3.png", pc: "/banner/pc_3.png" },
+    { mobile: "/banner/mobile_4.png", pc: "/banner/pc_4.png" }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -101,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Full-bleed Banner Carousel Section */}
-      <section className="w-full overflow-hidden group aspect-[5/2] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900 mb-10">
+      <section className="w-full overflow-hidden group aspect-[4/1] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900 mb-10">
         <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -114,7 +115,7 @@ export default function Home() {
                 src={img.mobile}
                 alt={`Slide ${idx + 1} Mobile`}
                 fill
-                className="object-cover md:hidden"
+                className="object-contain md:hidden"
                 priority={idx === 1}
               />
               {/* PC Image (5:1) */}
@@ -176,8 +177,13 @@ export default function Home() {
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">We combine years of academic expertise with a modern, student-centric approach to deliver consistent results.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
+              {
+                icon: <GraduationCap className="w-6 h-6" />,
+                title: "15+ Faculties",
+                desc: "Our team of over 15 experienced educators ensure personalized guidance for every subject."
+              },
               {
                 icon: <Users className="w-6 h-6" />,
                 title: "Expert Mentorship",
