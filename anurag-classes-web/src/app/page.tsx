@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Full-bleed Banner Carousel Section */}
-      <section className="w-full overflow-hidden group aspect-[4/1] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900 mb-10">
+      <section className="w-full overflow-hidden group aspect-[5/2] md:aspect-[5/1] shadow-lg bg-slate-100 dark:bg-slate-900 mb-10">
         <div
           className={`flex w-full h-full ${isTransitionEnabled ? "transition-transform duration-700 ease-in-out" : "transition-none"}`}
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -115,7 +115,7 @@ export default function Home() {
                 src={img.mobile}
                 alt={`Slide ${idx + 1} Mobile`}
                 fill
-                className="object-contain md:hidden"
+                className="object-cover md:hidden"
                 priority={idx === 1}
               />
               {/* PC Image (5:1) */}
