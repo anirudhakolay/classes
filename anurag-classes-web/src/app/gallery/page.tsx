@@ -48,13 +48,7 @@ export default function GalleryPage() {
         "Pre-Board Practice Paper Examination/IMG-20260625-WA0027.jpg",
         "Pre-Board Practice Paper Examination/IMG-20260625-WA0028.jpg",
         "Pre-Board Practice Paper Examination/IMG-20260625-WA0029.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0030.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0031.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0034.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0035.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0036.jpg",
-        "Pre-Board Practice Paper Examination/IMG-20260625-WA0037.jpg",
-        "Pre-Board Practice Paper Examination/WhatsApp Image 2026-06-24 at 11.25.36 PM.jpeg"
+        "Pre-Board Practice Paper Examination/IMG-20260625-WA0030.jpg"
       ]
     },
     {
