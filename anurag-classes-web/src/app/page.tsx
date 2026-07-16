@@ -117,6 +117,7 @@ export default function Home() {
                 fill
                 className="object-cover md:hidden"
                 priority={idx === 1}
+                unoptimized
               />
               {/* PC Image (5:1) */}
               <Image
@@ -125,6 +126,7 @@ export default function Home() {
                 fill
                 className="object-contain hidden md:block"
                 priority={idx === 1}
+                unoptimized
               />
             </div>
           ))}
