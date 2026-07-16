@@ -31,7 +31,7 @@ export default function AchievementsPage() {
       {/* Yearly Toppers Section */}
       <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-          
+
           {/* Toppers of 2026 */}
           <div className="flex flex-col items-center">
             <motion.div {...fadeIn} className="w-full">
@@ -39,7 +39,7 @@ export default function AchievementsPage() {
                 Toppers of <span className="text-orange-500">2026</span>
               </h2>
               <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full mb-12"></div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {[
                   { src: "/achievements/Page 4.png", alt: "Toppers 2026 Page 4" },
@@ -66,7 +66,7 @@ export default function AchievementsPage() {
                 Toppers of <span className="text-orange-500">2025</span>
               </h2>
               <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full mb-12"></div>
-              
+
               <div className="relative aspect-[1600/1460] rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900 group hover:shadow-orange-500/10 transition-all duration-300">
                 <Image
                   src={photo1}
@@ -86,7 +86,7 @@ export default function AchievementsPage() {
                 Toppers of <span className="text-orange-500">2024</span>
               </h2>
               <div className="w-24 h-1.5 bg-orange-500 mx-auto rounded-full mb-12"></div>
-              
+
               <div className="relative aspect-[1425/1313] rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900 group hover:shadow-orange-500/10 transition-all duration-300">
                 <Image
                   src={photo2}
@@ -106,18 +106,18 @@ export default function AchievementsPage() {
       <section className="pb-24 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-             {[
-               { icon: <Users className="w-8 h-8" />, num: "1000+", label: "Success Stories" },
-               { icon: <Star className="w-8 h-8" />, num: "95.6%", label: "Highest Score" },
-               { icon: <GraduationCap className="w-8 h-8" />, num: "100%", label: "Dedication" },
-               { icon: <Award className="w-8 h-8" />, num: "Multiple", label: "State Awards" }
-             ].map((s, i) => (
-               <div key={i} className="text-center">
-                 <div className="w-16 h-16 rounded-full bg-orange-50 dark:bg-orange-500/10 text-orange-500 flex items-center justify-center mx-auto mb-4">{s.icon}</div>
-                 <div className="text-4xl font-black text-slate-900 dark:text-white mb-1">{s.num}</div>
-                 <div className="text-xs text-slate-500 font-bold uppercase tracking-widest">{s.label}</div>
-               </div>
-             ))}
+            {[
+              { icon: <Users className="w-8 h-8" />, num: "1000+", label: "Success Stories" },
+              { icon: <Star className="w-8 h-8" />, num: "95.6%", label: "Highest Score" },
+              { icon: <GraduationCap className="w-8 h-8" />, num: "100%", label: "Dedication" },
+              { icon: <Award className="w-8 h-8" />, num: "Multiple", label: "State Awards" }
+            ].map((s, i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 rounded-full bg-orange-50 dark:bg-orange-500/10 text-orange-500 flex items-center justify-center mx-auto mb-4">{s.icon}</div>
+                <div className="text-4xl font-black text-slate-900 dark:text-white mb-1">{s.num}</div>
+                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

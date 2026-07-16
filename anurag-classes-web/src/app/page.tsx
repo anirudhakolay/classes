@@ -19,9 +19,9 @@ import Image from "next/image";
 
 export default function Home() {
   const carouselImages = [
-    { mobile: "/banner/1.png", pc: "/banner/pc_1.png" },
-    { mobile: "/banner/2.png", pc: "/banner/pc_2.png" },
-    { mobile: "/banner/3.png", pc: "/banner/pc_3.png" },
+    { mobile: "/banner/1-1.png", pc: "/banner/pc_1.png" },
+    { mobile: "/banner/2-1.png", pc: "/banner/pc_2.png" },
+    { mobile: "/banner/3-1.png", pc: "/banner/pc_3.png" },
     { mobile: "/banner/4-1.png", pc: "/banner/pc_4.png" }
   ];
 
@@ -157,14 +157,14 @@ export default function Home() {
       </section>
 
       {/* CTA Buttons */}
-      <section className="pb-16 px-4 flex justify-center">
+      <section className="pb-8 px-4 flex justify-center">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
           <Link href="/inquiry" className="w-full sm:w-auto px-10 py-4 rounded-full bg-orange-500 text-white font-black text-lg hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all flex items-center justify-center">Enroll Now <ChevronRight className="ml-2 w-5 h-5" /></Link>
           <a href="https://wa.me/917977338822" target="_blank" rel="noopener noreferrer" className="flex items-center glass rounded-full px-10 py-4 w-full sm:w-auto justify-center hover:shadow-lg transition-all"><Phone className="w-5 h-5 mr-3 text-orange-500" /><span className="font-black text-xl text-slate-800 dark:text-slate-200 tracking-tight">7977338822</span></a>
         </div>
       </section>
       {/* About Preview */}
-      <section className="pt-24 relative z-10 bg-slate-50 dark:bg-slate-900/40">
+      <section className="pt-10 relative z-10 bg-slate-50 dark:bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeIn} className="text-center mb-16 relative">
             <div className="flex justify-center mb-6">
