@@ -21,13 +21,6 @@ const stagger = {
 
 const facultyData = [
   {
-    name: "Prof. Avinash Magar",
-    role: "MATHS FACULTY",
-    badge: "Msc Maths, B.ED | 15+ Yrs Exp",
-    desc: "Prof. Avinash Magar focuses on building strong foundations and problem-solving techniques for mathematics.",
-    image: "/avinash.jpg"
-  },
-  {
     name: "Prof. Ravi Patil",
     role: "CHEMISTRY FACULTY",
     badge: "Msc (Organic Chemistry) | 15+ Yrs Exp",
@@ -35,10 +28,17 @@ const facultyData = [
     image: "/ravi.jpg"
   },
   {
-    name: "Prof. Sahil Patel",
+    name: "Prof. Avinash Magar",
+    role: "MATHS FACULTY",
+    badge: "Msc Maths, B.ED | 15+ Yrs Exp",
+    desc: "Prof. Avinash Magar focuses on building strong foundations and problem-solving techniques for mathematics.",
+    image: "/avinash.jpg"
+  },
+  {
+    name: "Prof. Sahil Patil",
     role: "PHYSICS FACULTY",
     badge: "M.Sc. in Physics, B.Ed. | SET Qualified",
-    desc: "Prof. Sahil Patel is an expert in Physics with 12+ years of teaching experience.",
+    desc: "Prof. Sahil Patil is an expert in Physics with 12+ years of teaching experience.",
     image: "/sahil patel.jpg"
   },
   {
